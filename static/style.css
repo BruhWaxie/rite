@@ -1,0 +1,537 @@
+/* Використання шрифту */
+body {
+    font-family: "Open Sans", serif;
+    background-color: black;
+    color: white;
+}
+
+p{
+    color: white;
+    font-size: 16px;
+}
+
+/* Загальні стилі для обох navbar */
+nav {
+    display: flex;
+    justify-content: center; /* Центруємо по горизонталі */
+    align-items: center; /* Центруємо по вертикалі */
+    width: 100%;
+    top: 0px;
+  }
+  
+  #navbar-top img {
+    width: 50px; /* Максимальна ширина зображення */
+    height: auto; /* Автоматично підбираємо висоту, зберігаючи пропорції */
+    margin-right: 15px;
+  }
+  
+  #navbar-top ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+#nav-li {
+    margin-left: 20px;
+}
+  
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-button {
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+    width: 58px;
+    height: 24px;
+    font-size: 11px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.search-bar{
+  border-radius: 60px;
+  height: 24px;
+  backdrop-filter: blur(30px);
+  outline: none;
+  background-color: rgb(32, 32, 32);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+  
+  
+}
+
+.btn{
+  border-radius: 60px;
+  text-align: center;
+}
+
+.nav-scr{
+  color: white;
+  background-color: black;
+  
+}
+
+.main{
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline-container {
+  position: relative;
+  perspective: 1000px;
+  perspective-origin: center 100%;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.intro-echo {
+  mask-image: linear-gradient(180deg,rgba(255,255,255,0) 55%,rgb(255,255,255));
+  color: #fff;
+  text-align: center;
+  display: block;
+  opacity: 0;
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+
+
+.typography-section-headline {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.intro-headline {
+  color: #fff;
+  text-align: center;
+}
+
+
+  .intro-echo-1 {
+    animation-delay: 0s;
+    transform: translateY(15px); /* Початкова позиція */
+    animation: echo1 1s ease-in-out forwards; /* Анімація */
+  }
+  .intro-echo-2 {
+    animation-delay: 0.1s;
+    transform: translateY(32px); /* Початкова позиція */
+    animation: echo2 1.2s ease-in-out forwards; /* Анімація */
+  }
+  .intro-echo-3 {
+    animation-delay: 0.2s;
+    transform: translateY(51px); /* Початкова позиція */
+    animation: echo3 1.4s ease-in-out forwards; /* Анімація */
+  }
+  .intro-echo-4 {
+    animation-delay: 0.3s;
+    transform: translateY(74px); /* Початкова позиція */
+    animation: echo4 1.6s ease-in-out forwards; /* Анімація */
+  }
+  .intro-echo-5 {
+    animation-delay: 0.4s;
+    transform: translateY(103px); /* Початкова позиція */
+    animation: echo5 1.8s ease-in-out forwards; /* Анімація */
+  }
+  .intro-echo-6 {
+    animation-delay: 2s;
+    transform: translateY(145px); /* Початкова позиція */
+    animation: echo6 2s ease-in-out forwards; /* Анімація */
+  }
+  .intro-echo-7 {
+    animation-delay: 2.1s;
+    transform: translateY(210px); /* Початкова позиція */
+    animation: echo7 2.2s ease-in-out forwards; /* Анімація */
+  }
+  .intro-echo-8 {
+    animation-delay: 0.7s;
+    transform: translateY(326px); /* Початкова позиція */
+    animation: echo8 2.4s ease-in-out forwards; /* Анімація */
+  }
+
+
+
+@keyframes echo1 {
+  0% {
+    transform: translateY(0); /* Початок анімації */
+    opacity: 0%;
+    scale: 0.95;
+  }
+  100% {
+    transform: translateY(45px); /* Кінцева позиція */
+    opacity: 100%;
+    scale: 0.95;
+  }
+}
+
+@keyframes echo2 {
+  0% {
+    transform: translateY(0); /* Початок анімації */
+    opacity: 0%;
+    scale: 0.85;
+  }
+  100% {
+    transform: translateY(95px); /* Кінцева позиція */
+    opacity: 100%;
+    scale: 0.85;
+  }
+}
+
+@keyframes echo3 {
+  0% {
+    transform: translateY(0); /* Початок анімації */
+    opacity: 0%;
+    scale: 0.75;
+  }
+  100% {
+    transform: translateY(150px); /* Кінцева позиція */
+    opacity: 100%;
+    scale: 0.75;
+  }
+}
+
+@keyframes echo4 {
+  0% {
+    transform: translateY(0); /* Початок анімації */
+    opacity: 0%;
+    scale: 0.65;
+  }
+  100% {
+    transform: translateY(220px); /* Кінцева позиція */
+    opacity: 100%;
+    scale: 0.65;
+  }
+}
+
+@keyframes echo5 {
+  0% {
+    transform: translateY(0); /* Початок анімації */
+    opacity: 0%;
+    scale: 0.55;
+  }
+  100% {
+    transform: translateY(310px); /* Кінцева позиція */
+    opacity: 100%;
+    scale: 0.55;
+  }
+}
+
+@keyframes echo6 {
+  0% {
+    transform: translateY(0); /* Початок анімації */
+    opacity: 0%;
+    scale: 0.45;
+  }
+  100% {
+    transform: translateY(430px); /* Кінцева позиція */
+    opacity: 100%;
+    scale: 0.45;
+  }
+}
+
+@keyframes echo7 {
+  0% {
+    transform: translateY(0); /* Початок анімації */
+    opacity: 0%;
+    scale: 0.35;
+  }
+  100% {
+    transform: translateY(620px); /* Кінцева позиція */
+    opacity: 100%;
+    scale: 0.35;
+  }
+}
+
+@keyframes echo8 {
+  0% {
+    transform: translateY(0); /* Початок анімації */
+    opacity: 0%;
+    scale: 0.25;
+
+  }
+  100% {
+    transform: translateY(950px); /* Кінцева позиція */
+    opacity: 100%;
+    scale: 0.25;
+    
+  }
+}
+
+.rectangles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to right, black 50%, transparent 50%);
+  animation: moveRectangles 3s infinite alternate;
+}
+
+
+.typography-section-headline[data-active="true"] {
+  opacity: 1; /* Встановити видимість для активних елементів */
+}
+
+.transition-rectangle {
+  width: 200px; /* ширина */
+  height: 100px; /* висота */
+  background-color: #000000; /* колір прямокутника */
+  z-index: 100;
+  position: fixed;
+  top: 20px; /* відступ зверху */
+  overflow: visible;
+  opacity: 0%;
+  transition: opacity 0.5s ease; /* анімація зміни прозорості */
+}
+
+.show-rect{
+  opacity: 100%;
+}
+
+.link-with-line {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-with-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -19px; /* Відступ від тексту */
+  width: 100%;
+  height: 1px; /* Товщина лінії */
+  background-color: white; /* Колір лінії */
+  transform: scaleX(1);
+}
+
+.nav-other{
+  color: lightgray;
+  transition: color 0.5s ease;
+}
+
+.nav-other:hover{
+  color: white;
+}
+
+
+/* Початковий стан навбару */
+.nav-transition {
+  margin-top: 56px;
+  transition: margin-top 0.5s ease-in-out;
+}
+
+/* Стан після прокрутки */
+.nav-fixed {
+  margin-top: 0px;
+}
+
+.spacer {
+  height: 100vh;
+}
+
+.target {
+  width: 100px;
+  height: 100px;
+  background-color: lightcoral;
+  position: absolute;
+  top: 100vh; /* Початкове розташування */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease, font-size 0.1s ease;
+}
+
+.fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-link {
+  color: rgb(210, 210, 210);
+  text-decoration: none;
+  transition: all 0.5s ease;
+
+}
+
+.nav-link:hover {
+  color: white;
+  transform: translateY(-1px);
+}
+
+.subtext {
+  font-size: 10px;
+}
+
+.author-info{
+  color: gray;
+  font-size: small;
+  font-style: italic;
+}
+
+.author-link{
+  color: gray;
+  text-decoration: disc;
+  transition: color 0.5s ease;
+
+}
+
+.author-link:hover{
+  color: white;
+}
+
+.new-status-info{
+  color: white;
+  font-size: 12px;
+  background-color: rgb(48, 209, 88);
+  font-weight: bold;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 36px;
+  
+}
+
+.hr-list-items{
+  margin-right: 15px;
+  font-size: small;
+  margin-top: -5px;
+}
+
+.link-with-line-bottom {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-with-line-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 31px; /* Відступ від тексту */
+  width: 100%;
+  height: 0.5px; /* Товщина лінії */
+  background-color: white; /* Колір лінії */
+  transform: scaleX(1);
+}
+
+.vcenter{
+  display: flex;
+  align-items: center;
+}
+
+.hcenter{
+  display: flex;
+  justify-content: center;
+}
+
+.article-content{
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.article-info-box{
+  background-color: #1c1c1e;
+  width: 45vh;
+  height: fit-content;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.info-box-title{
+  font-size: 120%;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.info-box-image{
+  width: 108%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.tablelist-items{
+  margin-top: 10px;
+}
+
+.info-box-text{
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.table-custom{
+  background-color: #1c1c1e ;
+  
+}
+
+tbody{
+  color: white;
+  background-color: #1c1c1e;
+}
+
+.table-custom th{
+  color: white;
+  background-color: #1c1c1e;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-collapse: collapse;
+}
+
+.table-custom td{
+  color: white;
+  background-color: #1c1c1e;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-collapse: collapse;
+  border-bottom: none !important;
+}
+
+h4{
+  margin-top: 50px;
+  font-weight: 700;
+}
+
+h5{
+  font-weight: 600;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.article-list li{
+  list-style:disc !important;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
