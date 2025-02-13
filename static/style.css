@@ -535,3 +535,161 @@ h5{
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
+.acc-info{
+  display: flex;
+  justify-content: center;
+}
+
+.acc-name{
+  font-weight: bold;
+  margin-top: 2.5vh;
+}
+
+.acc-tag{
+  font-weight: normal !important;
+  color: #9f9f9f;
+  text-decoration: underline;
+  font-size: 1em;
+}
+
+.acc-image{
+  width: 15vh;
+  height: 15vh;
+  border-radius: 100%;
+  margin-top: 10%;
+}
+
+.acc-info-container{
+  background-color: #1c1c1e;
+  border-radius: 10px;
+}
+
+.editing-panel{
+  margin-top: -10px;
+  padding: 10px;
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(31, 30, 30, 0);
+  backdrop-filter: blur(20px);
+  transition: all 0.5 ease;
+}
+
+.editing-panel::after{
+  margin-top: -1vh;
+  padding: 10px;
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(31, 30, 30, 60);
+  backdrop-filter: blur(20px);
+}
+
+.divider{
+border-left:1px solid #353535;
+height:4vh;
+}
+
+
+.nav-img{
+  width: 1.3em;
+}
+
+.dropdown-menu{
+  z-index: 1001;
+  background-color: rgba(31,30,30,90);
+  backdrop-filter: blur(20);
+}
+
+.nav-select{
+  background-color: #00000000;
+  border: none;
+}
+
+.editing-panel option{
+  background-color: #1f1e1e;
+  border-radius: 3px;
+}
+
+.title-input{
+  margin-top: 10vh;
+  background-color: #000000;
+  font-size: 30px;
+  border: none;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  margin-left: 10px;
+  outline: none;
+}
+
+.description-input{
+  background-color: #000000;
+  font-size: 14px;
+  border: none;
+  color: white;
+  width: 100%;
+  font-weight: medium;
+  margin-left: 10px;
+  outline: none;
+}
+
+.text-input{
+  background-color: #000000;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+#editor {
+  outline: none;
+}
+
+#editor li {
+  list-style-type: disc; /* Повертає стандартні маркери */
+  
+}
+
+#editor img {
+  border-radius: 20px;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.editor-container{
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  justify-content: left;
+  align-items:first baseline;
+  overflow: hidden;
+}
+
+#editor a{
+  text-decoration: underline;
+  color: #007AFF;
+}
+
+.category-selector{
+  background-color: #1f1e1e;
+  outline: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.category-selector option{
+  background-color: #1f1e1e;
+  border-radius: 3px;
+}
+
+#editing-panel{
+  transition: background-color 0.5s ease;
+}

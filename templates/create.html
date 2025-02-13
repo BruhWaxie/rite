@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Home</title>
+{% endblock title %}
+{% block content %}
+
+<main>
+  <div class="input-group mb-3">
+    <input required class="title-input" type="title" placeholder="Title">
+  </div>
+  <div class="input-group mb-3">
+    <input class="description-input" type="description" placeholder="Description(optional)">
+  </div>
+  <div class="input-group">
+    <select class="form-select category-selector" id="CategorySelector">
+      <option selected>Choose...</option>
+      <option value="Title">Title</option>
+      <option value="Subtitle">Subtitle</option>
+      <option value="Subtitle 2">Subtitle 2</option>
+      <option value="Paragraph">Paragraph</option>
+  </select>
+    </div>
+
+  <div id="fullNavbar" class="sticky-top">
+    <nav data-bs-theme="dark" class="navbar navbar-expand-lg">
+      <div class="container-fluid editing-panel" id="editingPanel">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <button class="nav-link" aria-current="page" href="#"><img class="nav-img" src="static\img\icons\undo.svg" id="undo" alt=""></button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" aria-current="page" href="#"><img class="nav-img" src="static\img\icons\redo.svg" id="redo" alt=""></button>
+              </li>
+              <li class="nav-item">
+                  <button class="nav-link" aria-current="page" href="#"><div class="divider"></div></button>
+                  </li>
+
+                  <div class="input-group mb-3">
+                    <select class="form-select nav-select" id="inputGroupSelect01">
+                      <option value="Title">Title</option>
+                      <option value="Subtitle">Subtitle</option>
+                      <option value="Subtitle 2">Subtitle 2</option>
+                      <option selected value="Paragraph">Paragraph</option>
+                  </select>
+                    </div>
+
+                  <li class="nav-item">
+                      <button class="nav-link"><div class="divider"></div></button>
+                      </li>
+              <li class="nav-item">
+                  <button class="nav-link"><img class="nav-img" src="static\img\icons\bold-icon.svg" id="bold" alt=""></button>
+         
+                  </li>
+                  <li class="nav-item">
+                      <button class="nav-link"><img class="nav-img" src="static\img\icons\italic.svg" id="italic" alt=""></button>
+                      <li class="nav-item">
+                          <button class="nav-link"><div class="divider"></div></button>
+                          </li>
+                      </li>
+                      <li class="nav-item">
+                          <button class="nav-link"><img class="nav-img" src="static\img\icons\add-link.svg" id="add-link" alt=""></button>
+                        
+                          </li>
+                          <li class="nav-item">
+                              <button class="nav-link"><img class="nav-img" src="static\img\icons\info-box.svg" id="image" alt=""></button>
+                      
+                              </li>
+                          <li class="nav-item">
+                              <button class="nav-link"><img class="nav-img" src="static\img\icons\list.svg" id="list" alt=""></button>
+                      
+                              </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="submit">
+            <button style="margin-right: 10px; height: 25px; display: flex; align-items: center; justify-content: center; border-radius: 60px; font-size: 12px" class="btn btn-primary" type="submit">Save</button>
+            <button class="btn btn-primary" style="height: 25px; display: flex; align-items: center; justify-content: center; border-radius: 60px; font-size: 12px" type="submit">Publish</button>
+          </form>
+        </div>
+      </div>
+      
+    </nav>
+    <hr style="width: 100%; margin-top:-8px">
+
+  </div>
+
+
+
+    <div id="editor" contenteditable="true" class="editor-container"></div>
+
+    
+
+
+</main>
+<script src="{{ url_for('static', filename='js/editor.js') }}"></script>
+{% endblock content %}

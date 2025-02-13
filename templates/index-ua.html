@@ -1,0 +1,58 @@
+{% extends 'base-ua.html' %}
+{% block title %}
+    <title>Головна</title>
+{% endblock title %}
+{% block content %}
+  <header>
+      <nav class="navbar fixed-top nav-transition" style="margin-top: -100px;">
+          <div class="container-fluid" style="height: 55px; margin-top: -8px;background-color: rgba(14, 14,14, 0.8); backdrop-filter: blur(20px);">
+            <a class="navbar-brand" style="color: rgb(255, 255, 255); margin-left: 20%; font-weight: 600;">Версія 1</a>
+            <form class="d-flex" role="search" style="margin-right: 20%;">
+                  <a href="#" style="font-size: 12px;" class="link-with-line">Огляд</a>
+                  
+              <a href="#" class="nav-other" style="font-size: 12px; margin-left:15px">Відкритий код</a>
+              <a href="#" class="nav-other" style="font-size: 12px; margin-left:15px">Ліцензія</a>
+              <a href="#" class="nav-other"style="font-size: 12px; margin-left:15px">Інші проєкти</a>
+              
+            </form>
+            
+          </div>
+          <hr style="width: 200%; margin-top:-0.9px">
+        </nav>    
+  </header>
+  <main>
+      <div class="transition-rectangle" style=" width: 100%; height:100%;"></div>
+          
+      <div class="headline-container" style="margin-top: 10%; width: 100%; height:100%;">
+          <h3 class="typography-section-headline intro-headline" data-echo="A new imagination to text">Нова уява тексту</h3>        
+          <span class="typography-section-headline intro-echo intro-echo-1" style="z-index: -1;" aria-hidden="true" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 15, -120, 1); opacity: 0.6625;">Нова уява тексту</span>
+          <span class="typography-section-headline intro-echo intro-echo-2" style="z-index: -1;" aria-hidden="true" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 32, -260, 1); opacity: 0.575;">Нова уява тексту</span>
+          <span class="typography-section-headline intro-echo intro-echo-3" style="z-index: -1;" aria-hidden="true" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 51, -440, 1); opacity: 0.4875;">Нова уява тексту</span>
+          <span class="typography-section-headline intro-echo intro-echo-4" style="z-index: -1;" aria-hidden="true" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 74, -680, 1); opacity: 0.4;">Нова уява тексту</span>
+          <span class="typography-section-headline intro-echo intro-echo-5" style="z-index: -1;" aria-hidden="true" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 103, -1010, 1); opacity: 0.3125;">Нова уява тексту</span>
+          <span class="typography-section-headline intro-echo intro-echo-6" style="z-index: -1;" aria-hidden="true" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 145, -1520, 1); opacity: 0.225;">Нова уява тексту</span>
+          <span class="typography-section-headline intro-echo intro-echo-7" style="z-index: -1;" aria-hidden="true" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 210, -2360, 1); opacity: 0.1375;">Нова уява тексту</span>
+          <span class="typography-section-headline intro-echo intro-echo-8" style="z-index: -1;" aria-hidden="true" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 326, -4000, 1); opacity: 0.05;">Нова уява тексту</span>
+          </div>
+
+
+          
+
+  </main>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector(".nav-transition");
+  
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        navbar.style.marginTop = "0px"; // Зменшуємо відступ
+      } else {
+        navbar.style.marginTop = "-100px"; // Повертаємо початковий відступ
+      }
+    });
+  });
+
+  
+</script>
+
+{% endblock content %}

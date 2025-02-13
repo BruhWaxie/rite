@@ -22,6 +22,34 @@ def explore():
 def article():
     return render_template("article.html")
 
+@app.route("/account")  # Вказуємо url-адресу для виклику функції
+def account():
+    return render_template("account-info.html")
+
+@app.route("/create-article")  # Вказуємо url-адресу для виклику функції
+def create():
+    return render_template("create.html")
+
+@app.route("/ua")  # Вказуємо url-адресу для виклику функції
+def index_ua():
+    return render_template("index-ua.html")
+
+@app.route("/ua/login")  # Вказуємо url-адресу для виклику функції
+def login_ua():
+    return render_template("login-ua.html")
+
+@app.route("/ua/register")  # Вказуємо url-адресу для виклику функції
+def register_ua():
+    return render_template("register-ua.html")
+
+@app.route("/ua/article")  # Вказуємо url-адресу для виклику функції
+def article_ua():
+    return render_template("article-ua.html")
+
+@app.route("/ua/create-article")  # Вказуємо url-адресу для виклику функції
+def create_ua():
+    return render_template("create-ua.html")
+
 
 if __name__ == "__main__":
     app.config['TEMPLATES_AUTO_RELOAD'] = True  # автоматичне оновлення шаблонів
