@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageBtn = document.getElementById("image");
     const fullNavbar = document.getElementById("fullNavbar");
     const editingPanel = document.getElementById("editingPanel");
+    const publishBtn = this.querySelector("#publish-btn");
 
     function executeCommand(command, value = null) {
         editor.focus();
@@ -91,5 +92,35 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             editingPanel.style.backgroundColor = "rgba(31, 30, 30, 0)";
         }
+    });
+    publishBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let content = editor.innerHTML;
+        let title = document.getElementById("title").value;
+        let category = document.getElementById("category").value;
+        let description = document.getElementById("description").value;
+        
+        let data = {
+            title: title,
+            category: category,
+            description: description,
+            content: content,
+        };
+        fetch("/create-article", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    alert("Post published successfully!");
+                    window.location.href = "/";
+                } else {
+                    alert("Post could not be published!");
+                }
+            });
     });
 });

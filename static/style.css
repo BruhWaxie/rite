@@ -693,3 +693,7 @@ height:4vh;
 #editing-panel{
   transition: background-color 0.5s ease;
 }
+
+.article-content img{
+  border-radius: 20px;
+}

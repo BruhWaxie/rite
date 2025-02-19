@@ -4,16 +4,16 @@
 {% endblock title %}
 {% block content %}
 
-<main>
+<main class="container">
   <div class="input-group mb-3">
-    <input required class="title-input" type="title" placeholder="Title">
+    <input required class="title-input" type="title" id="title" placeholder="Title">
   </div>
   <div class="input-group mb-3">
-    <input class="description-input" type="description" placeholder="Description(optional)">
+    <input class="description-input" type="description" id="description" placeholder="Description(optional)">
   </div>
   <div class="input-group">
 
-    <select class="form-select category-selector" id="CategorySelector">
+    <select class="form-select category-selector" id="category">
       <option selected>Choose...</option>
       {% for id, category_name in categories %}
       <option value={{id}}>{{category_name}}</option>
@@ -75,7 +75,7 @@
           </ul>
           <form class="d-flex" role="submit">
             <button style="margin-right: 10px; height: 25px; display: flex; align-items: center; justify-content: center; border-radius: 60px; font-size: 12px" class="btn btn-primary" type="submit">Save</button>
-            <button class="btn btn-primary" style="height: 25px; display: flex; align-items: center; justify-content: center; border-radius: 60px; font-size: 12px" type="submit">Publish</button>
+            <button class="btn btn-primary" id="publish-btn" style="height: 25px; display: flex; align-items: center; justify-content: center; border-radius: 60px; font-size: 12px" type="submit">Publish</button>
           </form>
         </div>
       </div>

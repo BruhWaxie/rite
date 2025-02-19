@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from db_scripts import DBManager
-
+import html
 
 app = Flask(__name__)  # Створюємо веб–додаток Flask
 
@@ -22,17 +22,29 @@ def register():
 def explore():
     return render_template("explore.html")
 
-@app.route("/article")  # Вказуємо url-адресу для виклику функції
-def article():
-    return render_template("article.html")
+@app.route("/article/<int:article_id>")  # Вказуємо url-адресу для виклику функції
+def article_page(article_id):
+    article = db.get_article(article_id)
+    text = html.unescape(article[3])
+    return render_template("article.html", article=article, text=text, title=article[1], description=article[5])
 
 @app.route("/account")  # Вказуємо url-адресу для виклику функції
 def account():
     return render_template("account-info.html")
 
-@app.route("/create-article")  # Вказуємо url-адресу для виклику функції
+@app.route("/create-article", methods=['GET', 'POST'])  # Вказуємо url-адресу для виклику функції
 def create():
     categories = db.get_categories()
+    if request.method == 'POST':
+        data = request.get_json()
+        title = data.get('title')
+        content = html.escape(data.get('content'))
+        category = data.get('category')
+        description = data.get('description')
+        db.create_article(title, description, content, 1, category)
+
+        message = {'success':True,'massage':'Successully created article'}
+        return jsonify(message)
     return render_template("create.html", categories=categories, category_name=categories[1])
 
 @app.route("/ua")  # Вказуємо url-адресу для виклику функції

@@ -16,3 +16,17 @@ class DBManager():
         data = self.cursor.fetchall()
         self.conn.close()
         return data
+    
+    def create_article(self, title, description, text, author_id, category_id):
+        self.open_db()
+        self.cursor.execute('''INSERT INTO article (title, author_id, text, category_id, description) 
+                            VALUES (?, ?, ?, ?, ?)''', (title, author_id, text, category_id, description))
+        self.conn.commit()
+        self.conn.close()
+
+    def get_article(self, article_id):
+        self.open_db()
+        self.cursor.execute('''SELECT * FROM article WHERE id=?''', (article_id,))
+        data = self.cursor.fetchone()
+        self.conn.close()
+        return data
