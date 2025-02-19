@@ -1,6 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from db_scripts import DBManager
+
 
 app = Flask(__name__)  # Створюємо веб–додаток Flask
+
+db = DBManager('rite.db')
 
 @app.route("/")  # Вказуємо url-адресу для виклику функції
 def index():
@@ -28,7 +32,8 @@ def account():
 
 @app.route("/create-article")  # Вказуємо url-адресу для виклику функції
 def create():
-    return render_template("create.html")
+    categories = db.get_categories()
+    return render_template("create.html", categories=categories, category_name=categories[1])
 
 @app.route("/ua")  # Вказуємо url-адресу для виклику функції
 def index_ua():

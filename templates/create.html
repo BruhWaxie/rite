@@ -12,12 +12,12 @@
     <input class="description-input" type="description" placeholder="Description(optional)">
   </div>
   <div class="input-group">
+
     <select class="form-select category-selector" id="CategorySelector">
       <option selected>Choose...</option>
-      <option value="Title">Title</option>
-      <option value="Subtitle">Subtitle</option>
-      <option value="Subtitle 2">Subtitle 2</option>
-      <option value="Paragraph">Paragraph</option>
+      {% for id, category_name in categories %}
+      <option value={{id}}>{{category_name}}</option>
+      {% endfor %}
   </select>
     </div>
 
@@ -87,7 +87,7 @@
 
 
 
-    <div id="editor" contenteditable="true" class="editor-container"></div>
+    <form id="editor" contenteditable="true" class="editor-container"></form>
 
     
 
