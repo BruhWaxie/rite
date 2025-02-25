@@ -697,3 +697,79 @@ height:4vh;
 .article-content img{
   border-radius: 20px;
 }
+
+.search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+#search-bar{
+  background-color: #1f1e1e;
+  color: white;
+  border-color: white;
+  border-radius: 100px;
+  padding: 10px;
+  width: 50%;
+  
+  outline: none;
+}
+
+#search-bar::placeholder{
+  color: gray;
+}
+
+.search-bar-full{
+  height: 5vh;
+}
+
+.category-button{
+  margin-left: 5px;
+  background-color: #1c1c1c;
+  border-color: #b9b9b9;
+}
+
+.section-search{
+  margin-top: 17%;
+}
+
+.rectangle .content {
+  z-index: 2; /* Рівень тексту вище зображення */
+  color: #ffffff; /* Колір тексту */
+  font-size: 16px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон для тексту */
+  border-radius: 0 0 10px 10px; /* Закруглення тільки внизу */
+}
+
+.rectangle {
+  width: 500px; /* Ширина прямокутника */
+  height: 350px; /* Висота прямокутника */
+  background-color: #202020; /* Основний колір */
+  border: 2px solid #3b3b3b; /* Обведення */
+  border-radius: 50px; /* Закруглення кутів */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь */
+  display: flex;
+  justify-content: left; /* Вирівнювання по горизонталі */
+  color: #ffffff; /* Колір тексту */
+  overflow: hidden; /* Сховати зайве */
+  margin-bottom: 10px;
+}
+
+.section-articles{
+  margin-top: 45vh;
+  margin-bottom: 5vh;
+}
+
+.ft{
+  color: gray;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.footer{
+  background-color: #1f1e1e;
+  margin-top: 40vh;
+}
+

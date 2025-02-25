@@ -4,27 +4,31 @@
 {% endblock title %}
 {% block content %}
 
-<main class="container">
-  <div class="input-group mb-3">
-    <input required class="title-input" type="title" id="title" placeholder="Title">
-  </div>
-  <div class="input-group mb-3">
-    <input class="description-input" type="description" id="description" placeholder="Description(optional)">
-  </div>
-  <div class="input-group">
-
-    <select class="form-select category-selector" id="category">
-      <option selected>Choose...</option>
-      {% for id, category_name in categories %}
-      <option value={{id}}>{{category_name}}</option>
-      {% endfor %}
-  </select>
+<main>
+  <div class="container">
+    <div class="input-group mb-3">
+      <input required class="title-input" type="title" id="title" placeholder="Title">
     </div>
+    <div class="input-group mb-3">
+      <input class="description-input" type="description" id="description" placeholder="Description(optional)">
+    </div>
+    <div class="input-group">
+  
+      <select class="form-select category-selector" id="category">
+        <option selected>Choose...</option>
+        {% for id, category_name in categories %}
+        <option value={{id}}>{{category_name}}</option>
+        {% endfor %}
+    </select>
+      </div>
+  </div>
+  
 
   <div id="fullNavbar" class="sticky-top">
     <nav data-bs-theme="dark" class="navbar navbar-expand-lg">
       <div class="container-fluid editing-panel" id="editingPanel">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <button class="nav-link" aria-current="page" href="#"><img class="nav-img" src="static\img\icons\undo.svg" id="undo" alt=""></button>
@@ -84,10 +88,12 @@
     <hr style="width: 100%; margin-top:-8px">
 
   </div>
-
-
-
+  <div class="container">
     <form id="editor" contenteditable="true" class="editor-container"></form>
+  </div>
+
+
+    
 
     
 

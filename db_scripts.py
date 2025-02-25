@@ -30,3 +30,25 @@ class DBManager():
         data = self.cursor.fetchone()
         self.conn.close()
         return data
+    
+    def get_articles(self):
+        self.open_db()
+        self.cursor.execute('''SELECT * FROM article''')
+        data = self.cursor.fetchall()
+        self.conn.close()
+        return data
+    
+    def get_articles_by_category(self, category_id):
+        self.open_db()
+        self.cursor.execute('''SELECT * FROM article WHERE category_id=?''', (category_id,))
+        data = self.cursor.fetchall()
+        self.conn.close()
+        return data
+    
+    def search_articles(self, query):
+        self.open_db()
+        query = "%" + query + '%'
+        self.cursor.execute('''SELECT * FROM article WHERE (title LIKE ? OR description LIKE ? )''', (query, query))
+        data = self.cursor.fetchall()
+        self.conn.close()
+        return data

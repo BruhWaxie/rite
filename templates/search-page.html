@@ -3,9 +3,7 @@
     <title>Home</title>
 {% endblock title %}
 {% block content %}
-<main class="container" style="display: flex; flex-direction: column; align-items: center;">
-
-    <h1 class="section-search"><b>Search</b></h1>
+<main class="container">
     <form action="{{url_for('search_page')}}" class="d-flex search-bar-full my-3" role="search" method="get">
         <input required name="query" id="search-bar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50em;">
         <button class="btn btn-primary d-flex" type="submit">Search</button>
@@ -16,9 +14,8 @@
       {% endfor %}
     </section>
 
-    <section id="articles-section" style="display: flex; flex-direction: column; align-items: center;">
-        <h1 class="section-articles"><b>Articles</b></h1>
-        <div class="mt-3 d-flex flex-column flex-wrap flex-lg-row justify-content-center align-items-center mb-4 text-dark lh-sm text-decoration-none">
+    <section>
+        <div class="mt-3 d-flex flex-column flex-wrap flex-lg-row mb-4 text-dark lh-sm text-decoration-none">
             {% for article in articles %}
             <div class="rectangle me-2">
               <div class="text-content">
@@ -34,10 +31,7 @@
               </div>
             </div>
             {% endfor %}
-            
-          </div>
-    </section>
-      
-
+             
+          </
 </main>
 {% endblock content %}
